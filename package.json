@@ -1,0 +1,74 @@
+{
+  "name": "reorder",
+  "version": "0.0.1",
+  "description": "Reorders an array",
+  "author": "Philihp Busby <philihp@gmail.com>",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "babel src -d dist",
+    "lint": "eslint src",
+    "prepare": "npm run build",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "files": [
+    "/dist/",
+    "!/dist/**/__tests__/*.js"
+  ],
+  "keywords": [
+    "functional",
+    "array",
+    "reorder",
+    "undo"
+  ],
+  "devDependencies": {
+    "@babel/cli": "7.13.0",
+    "@babel/core": "7.13.8",
+    "@babel/preset-env": "7.13.9",
+    "@philihp/eslint-config": "4.2.0",
+    "husky": "5.1.3",
+    "jest-nyancat-reporter": "2.0.0",
+    "lint-staged": "10.5.4",
+    "prettier": "2.2.1",
+    "ramda": "0.27.1"
+  },
+  "homepage": "https://github.com/philihp/reorder#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philihp/reorder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/philihp/reorder/issues"
+  },
+  "jest": {
+    "modulePathIgnorePatterns": [
+      "dist/"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json}": [
+      "eslint --fix"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true,
+    "semi": false,
+    "trailingComma": "es5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "@philihp"
+    ],
+    "rules": {
+      "no-bitwise": "off",
+      "no-plusplus": "off"
+    }
+  }
+}
