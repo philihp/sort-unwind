@@ -1,6 +1,6 @@
 [![Version](https://img.shields.io/npm/v/sort-unwind)](https://www.npmjs.com/package/sort-unwind)
-![Tests](https://github.com/philihp/sort-unwind.js/workflows/tests/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/github/philihp/sort-unwind.js/badge.svg?branch=main)](https://coveralls.io/github/philihp/sort-unwind.js?branch=main)
+![Tests](https://github.com/philihp/sort-unwind/workflows/tests/badge.svg)
+[![Coverage Status](https://coveralls.io/repos/github/philihp/sort-unwind/badge.svg?branch=main)](https://coveralls.io/github/philihp/sort-unwind?branch=main)
 ![Downloads](https://img.shields.io/npm/dt/sort-unwind)
 ![License](https://img.shields.io/npm/l/sort-unwind)
 
