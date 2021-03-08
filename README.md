@@ -1,7 +1,7 @@
 [![Version](https://img.shields.io/npm/v/reorder)](https://www.npmjs.com/package/reorder)
 ![Tests](https://github.com/philihp/reorder.js/workflows/tests/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/philihp/reorder.js/badge.svg?branch=main)](https://coveralls.io/github/philihp/reorder.js?branch=main)
-![Downloads](https://img.shields.io/npm/dt/fast-shuffle)
+![Downloads](https://img.shields.io/npm/dt/reorder)
 ![License](https://img.shields.io/npm/l/reorder)
 
 # Reorder
