@@ -1,7 +1,7 @@
 {
-  "name": "reorder",
+  "name": "sort-unwind",
   "version": "0.0.0",
-  "description": "Reorders an array",
+  "description": "Sorts an array and then unwinds that sort on another array",
   "author": "Philihp Busby <philihp@gmail.com>",
   "license": "MIT",
   "main": "./dist/index.js",
@@ -36,13 +36,13 @@
     "lint-staged": "10.5.4",
     "prettier": "2.2.1"
   },
-  "homepage": "https://github.com/philihp/reorder#readme",
+  "homepage": "https://github.com/philihp/sort-unwind#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/philihp/reorder.git"
+    "url": "git+https://github.com/philihp/sort-unwind.git"
   },
   "bugs": {
-    "url": "https://github.com/philihp/reorder/issues"
+    "url": "https://github.com/philihp/sort-unwind/issues"
   },
   "jest": {
     "modulePathIgnorePatterns": [
