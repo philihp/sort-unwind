@@ -6,7 +6,7 @@
 
 # Reorder
 
-Sorts an array by a parallel array of ordinal ranks and returns the sorted array as well as a list of indexes to restore the original sort order.
+Sorts an array by an array of ranks and allows you to _undo_ back to the original shuffled state.
 
 ## Install
 
@@ -27,11 +27,15 @@ const [sortedSuits, unwind] = reorder(ranks, suits)
 // unwind <- [1, 3, 0, 2]
 ```
 
-Then to restore the original order
+You can then restore perhaps another array back to the original state.
 
 ```js
-const [resortedSuits] = reorder(unwind, sortedSuits)
-// resortedSuits <- ['♥', '♠', '♣', '♦']
+const names = ['spades', 'diamonds', 'hearts', 'clubs']
+const [reorderedNames, reorderedRanks] = reorder(unwind, names)
+// reorderedNames <- ['hearts', 'spades', 'clubs', 'diamonds']
+// reorderedRanks <- [2, 0, 3, 1]
 ```
 
-- Thanks to @varenc for showing me a better way to do this.
+## Thanks
+
+- [@varenc](https://github.com/varenc) for showing me a clever way to do this.
