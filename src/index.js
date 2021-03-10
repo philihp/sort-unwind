@@ -1,12 +1,12 @@
 import {
-  uncurryN,
-  pipe,
   addIndex,
   map,
-  zip,
-  sortBy,
+  pipe,
   prop,
+  sortBy,
   transpose,
+  uncurryN,
+  zip,
 } from 'ramda'
 
 export default uncurryN(2, (rank) =>
