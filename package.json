@@ -4,6 +4,7 @@
   "description": "Sorts an array and then unwinds that sort on another array",
   "author": "Philihp Busby <philihp@gmail.com>",
   "license": "MIT",
+  "sideEffects": false,
   "main": "./dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
