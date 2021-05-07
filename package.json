@@ -34,7 +34,7 @@
     "@philihp/eslint-config": "4.3.0",
     "fast-shuffle": "4.4.0",
     "husky": "6.0.0",
-    "lint-staged": "10.5.4",
+    "lint-staged": "11.0.0",
     "prettier": "2.2.1"
   },
   "homepage": "https://github.com/philihp/sort-unwind#readme",
