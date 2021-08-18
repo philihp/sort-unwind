@@ -24,7 +24,7 @@ const ranks = [2, 0, 3, 1]
 
 const [sortedSuits, tenet] = unwind(ranks, suits)
 // sortedSuits <- ['♠', '♦', '♥', '♣']
-// unwind <- [1, 3, 0, 2]
+// tenet <- [1, 3, 0, 2]
 ```
 
 You can then restore the entropy back into the array, or perhaps apply that entropy to another array. Sort of like sending that array backward in time to the more chaotic state.
