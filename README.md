@@ -40,3 +40,4 @@ const [tenetNames, tenetRanks] = unwind(tenet, names)
 ## Thanks
 
 - [@varenc](https://github.com/varenc) for showing me a clever way to do this.
+- [@crosseye](https://github.com/crosseye) for working out a simpler way without a pipe
