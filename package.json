@@ -28,9 +28,9 @@
     "ramda": "0.27.1"
   },
   "devDependencies": {
-    "@babel/cli": "7.15.4",
-    "@babel/core": "7.15.5",
-    "@babel/preset-env": "7.15.6",
+    "@babel/cli": "7.15.7",
+    "@babel/core": "7.15.8",
+    "@babel/preset-env": "7.15.8",
     "@philihp/eslint-config": "5.0.2",
     "fast-shuffle": "4.5.1",
     "husky": "7.0.2",
