@@ -31,7 +31,7 @@
     "@babel/cli": "7.18.10",
     "@babel/core": "7.18.13",
     "@babel/preset-env": "7.18.10",
-    "@philihp/eslint-config": "5.1.4",
+    "@philihp/eslint-config": "6.0.1",
     "fast-shuffle": "5.0.1",
     "husky": "8.0.1",
     "lint-staged": "13.0.3"
