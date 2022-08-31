@@ -24,9 +24,7 @@
     "undo",
     "sort"
   ],
-  "dependencies": {
-    "ramda": "0.28.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/cli": "7.18.9",
     "@babel/core": "7.18.9",
