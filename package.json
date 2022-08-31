@@ -8,7 +8,7 @@
   "main": "./dist/index.js",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "lint": "eslint --ext .ts,.js src",
+    "lint": "eslint --ext .ts,.json,.js src",
     "prepare": "husky install && npm run build",
     "test": "jest",
     "test:coverage": "jest --coverage",
