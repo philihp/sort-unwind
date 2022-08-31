@@ -7,8 +7,8 @@ describe('reorder', () => {
     const src: any[] = []
     const rank: number[] = []
     const [dst, derank] = reorder(rank, src)
-    expect(dst).toBeUndefined()
-    expect(derank).toBeUndefined()
+    expect(dst).toStrictEqual([])
+    expect(derank).toStrictEqual([])
   })
 
   it('accepts 1 item', () => {

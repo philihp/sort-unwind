@@ -1,7 +1,7 @@
 export const curried =
   (rank: number[]) =>
-  (src: any[]): any[] => {
-    if (src.length === 0) return []
+  <T>(src: T[]): [T[], number[]] => {
+    if (src.length === 0) return [[], []]
 
     const zipped: [number, number, any][] = []
     src.forEach((_, i) => {
@@ -10,7 +10,7 @@ export const curried =
     // Array.sort will mutate the array, so we must make another
     zipped.sort(([a], [b]) => a - b)
 
-    const dst: any[] = []
+    const dst: T[] = []
     const derank: number[] = []
     zipped.forEach(([_, i, o]) => {
       derank.push(i)
