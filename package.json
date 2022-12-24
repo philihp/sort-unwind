@@ -26,8 +26,8 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@babel/cli": "7.19.3",
-    "@babel/core": "7.20.5",
+    "@babel/cli": "7.20.7",
+    "@babel/core": "7.20.7",
     "@babel/preset-env": "7.20.2",
     "@philihp/eslint-config": "6.0.2",
     "@philihp/prettier-config": "1.0.0",
