@@ -34,7 +34,7 @@
     "@types/jest": "29.5.0",
     "@typescript-eslint/eslint-plugin": "5.56.0",
     "@typescript-eslint/parser": "5.56.0",
-    "eslint": "8.36.0",
+    "eslint": "8.37.0",
     "eslint-import-resolver-typescript": "3.5.4",
     "eslint-plugin-import": "2.27.5",
     "fast-shuffle": "5.0.2",
