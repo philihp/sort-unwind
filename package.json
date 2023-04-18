@@ -1,6 +1,6 @@
 {
   "name": "sort-unwind",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Sorts an array and then unwinds that sort on another array",
   "author": "Philihp Busby <philihp@gmail.com>",
   "license": "MIT",
