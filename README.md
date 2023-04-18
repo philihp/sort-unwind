@@ -1,5 +1,5 @@
 [![Version](https://img.shields.io/npm/v/sort-unwind)](https://www.npmjs.com/package/sort-unwind)
-[![Requirements Status](https://img.shields.io/librariesio/github/philihp/sort-unwind)](https://libraries.io/npm/sort-unwind)
+[![Requirements Status](https://img.shields.io/librariesio/github/philihp/sort-unwind?color=green)](https://libraries.io/npm/sort-unwind)
 ![Tests](https://github.com/philihp/sort-unwind/workflows/tests/badge.svg)
 [![Coverage Status](https://coveralls.io/repos/github/philihp/sort-unwind/badge.svg?branch=main)](https://coveralls.io/github/philihp/sort-unwind?branch=main)
 ![Downloads](https://img.shields.io/npm/dt/sort-unwind)
