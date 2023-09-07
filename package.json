@@ -30,6 +30,7 @@
     "@babel/preset-env": "7.22.14",
     "@philihp/eslint-config": "6.0.2",
     "@philihp/prettier-config": "1.0.0",
+    "@tsconfig/node20": "20.1.2",
     "@types/jest": "29.5.4",
     "@typescript-eslint/eslint-plugin": "6.5.0",
     "@typescript-eslint/parser": "6.5.0",
