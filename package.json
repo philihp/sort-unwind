@@ -37,7 +37,7 @@
     "eslint": "8.56.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-jest": "27.6.0",
+    "eslint-plugin-jest": "27.6.1",
     "eslint-plugin-prettier": "5.1.2",
     "fast-shuffle": "6.1.0",
     "husky": "8.0.3",
