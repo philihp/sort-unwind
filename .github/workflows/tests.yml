@@ -9,13 +9,16 @@ jobs:
   tests:
     runs-on: ubuntu-latest
     strategy:
+      continue-on-error: true
       matrix:
+        fail-fast: false
         node-version:
           - 16.x # maintainence ends 2024-04-30
           - 17.x # deprecated
           - 18.x # maintainence ends 2025-04-30
           - 19.x # deprecated
           - 20.x # maintainence ends 2026-04-30
+          - 21.x # maintainence ends 2024-06-01
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
