@@ -26,9 +26,9 @@
     "sort"
   ],
   "devDependencies": {
-    "@babel/cli": "7.24.5",
-    "@babel/core": "7.24.5",
-    "@babel/preset-env": "7.24.5",
+    "@babel/cli": "7.24.6",
+    "@babel/core": "7.24.6",
+    "@babel/preset-env": "7.24.6",
     "@philihp/prettier-config": "1.0.0",
     "@tsconfig/node20": "20.1.4",
     "@types/jest": "29.5.12",
