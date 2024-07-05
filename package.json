@@ -52,11 +52,6 @@
   "bugs": {
     "url": "https://github.com/philihp/sort-unwind/issues"
   },
-  "lint-staged": {
-    "src/**/*.{js,json,ts}": [
-      "eslint --ext .js,.json,.ts --fix"
-    ]
-  },
   "prettier": "@philihp/prettier-config",
   "engines": {
     "node": ">=18.0.0"
