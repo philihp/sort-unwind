@@ -13,11 +13,9 @@ jobs:
       fail-fast: false
       matrix:
         node-version:
-          - 17.x # deprecated
           - 18.x # maintainence ends 2025-04-30
-          - 19.x # deprecated
           - 20.x # maintainence ends 2026-04-30
-          - 21.x # maintainence ends 2024-06-01
+          - 22.x # maintainence ends 2027-04-30
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -34,7 +32,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: 22.x
       - run: npm install
       - run: npm run build --if-present
       - run: npm run test:coverage
