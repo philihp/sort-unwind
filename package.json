@@ -7,6 +7,15 @@
   "sideEffects": false,
   "type": "module",
   "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsup",
     "lint": "eslint .",
@@ -17,6 +26,7 @@
   },
   "files": [
     "/dist/",
+    "package.json",
     "!/dist/**/__tests__/*.js"
   ],
   "keywords": [
