@@ -6,7 +6,16 @@
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
-  "main": "./dist/index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsup",
     "lint": "eslint .",
@@ -17,6 +26,7 @@
   },
   "files": [
     "/dist/",
+    "package.json",
     "!/dist/**/__tests__/*.js"
   ],
   "keywords": [
