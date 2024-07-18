@@ -52,7 +52,7 @@
     "typescript-eslint": "7.16.0",
     "lint-staged": "15.2.7",
     "prettier": "3.3.3",
-    "ts-jest": "29.2.2"
+    "ts-jest": "29.2.3"
   },
   "homepage": "https://github.com/philihp/sort-unwind#readme",
   "repository": {
