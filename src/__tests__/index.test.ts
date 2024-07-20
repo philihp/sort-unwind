@@ -1,12 +1,12 @@
 import { shuffle } from 'fast-shuffle'
-import reorder, { curried } from '..'
+import { unwind, curried } from '..'
 
-describe('reorder', () => {
+describe('unwind', () => {
   it('accepts zero items', () => {
     expect.assertions(2)
     const src: any[] = []
     const rank: number[] = []
-    const [dst, derank] = reorder(rank, src)
+    const [dst, derank] = unwind(rank, src)
     expect(dst).toStrictEqual([])
     expect(derank).toStrictEqual([])
   })
@@ -15,7 +15,7 @@ describe('reorder', () => {
     expect.assertions(2)
     const src = ['a']
     const rank = [0]
-    const [dst, derank] = reorder(rank, src)
+    const [dst, derank] = unwind(rank, src)
     expect(dst).toStrictEqual(['a'])
     expect(derank).toStrictEqual([0])
   })
@@ -24,7 +24,7 @@ describe('reorder', () => {
     expect.assertions(2)
     const src = ['b', 'a']
     const rank = [1, 0]
-    const [dst, derank] = reorder(rank, src)
+    const [dst, derank] = unwind(rank, src)
     expect(dst).toStrictEqual(['a', 'b'])
     expect(derank).toStrictEqual([1, 0])
   })
@@ -33,7 +33,7 @@ describe('reorder', () => {
     expect.assertions(2)
     const src = ['b', 'c', 'a']
     const rank = [1, 2, 0]
-    const [dst, derank] = reorder(rank, src)
+    const [dst, derank] = unwind(rank, src)
     expect(dst).toStrictEqual(['a', 'b', 'c'])
     expect(derank).toStrictEqual([2, 0, 1])
   })
@@ -42,7 +42,7 @@ describe('reorder', () => {
     expect.assertions(2)
     const src: string[] = ['b', 'd', 'c', 'a']
     const rank: number[] = [1, 3, 2, 0]
-    const [dst, derank] = reorder(rank, src)
+    const [dst, derank] = unwind(rank, src)
     expect(dst).toStrictEqual(['a', 'b', 'c', 'd'])
     expect(derank).toStrictEqual([3, 0, 2, 1])
   })
@@ -52,8 +52,8 @@ describe('reorder', () => {
     const oneToAHundred = [...new Array(100)].map((_, i) => i)
     const src: any[] = shuffle(oneToAHundred)
     const rank: number[] = shuffle(oneToAHundred)
-    const [trans, derank] = reorder(rank, src)
-    const [dst, dederank] = reorder(derank, trans)
+    const [trans, derank] = unwind(rank, src)
+    const [dst, dederank] = unwind(derank, trans)
     expect(src).toStrictEqual(dst)
     expect(src).not.toBe(dst)
     expect(dederank).not.toBe(rank)
@@ -76,7 +76,7 @@ describe('reorder', () => {
     expect.assertions(1)
     const src = ['a', 'b', 'c', 'd', 'e', 'f']
     const rank = [0.28591, 0.42682, 0.35912, 0.21237, 0.60619, 0.47078]
-    const [dst] = reorder(rank, src)
+    const [dst] = unwind(rank, src)
     expect(dst).toStrictEqual(['d', 'a', 'c', 'b', 'f', 'e'])
   })
 })
