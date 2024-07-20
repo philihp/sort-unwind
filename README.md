@@ -17,7 +17,7 @@ npm install --save sort-unwind
 ## Usage
 
 ```js
-import unwind from 'sort-unwind'
+import { unwind } from 'sort-unwind'
 
 const suits = ['♥', '♠', '♣', '♦']
 const ranks = [2, 0, 3, 1]

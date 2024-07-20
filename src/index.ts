@@ -22,4 +22,4 @@ export const curried =
 // if i understood generics better, i think this could go back
 // to just being one exported function with an optional second
 // param... but this is just simpler.
-export default <T>(rank: number[], src: T[]) => curried(rank)(src)
+export const unwind = <T>(rank: number[], src: T[]) => curried(rank)(src)
