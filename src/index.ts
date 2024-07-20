@@ -23,3 +23,6 @@ export const curried =
 // to just being one exported function with an optional second
 // param... but this is just simpler.
 export const unwind = <T>(rank: number[], src: T[]) => curried(rank)(src)
+
+// deprecated, will be removed in version 4
+export default unwind
