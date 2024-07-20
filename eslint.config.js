@@ -1,7 +1,7 @@
 import eslint from '@eslint/js'
 import jestPlugin from 'eslint-plugin-jest'
 import tseslint from 'typescript-eslint'
-import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
+import eslintConfigPrettier from "eslint-config-prettier";
 
 export default tseslint.config(
   {
@@ -9,7 +9,11 @@ export default tseslint.config(
   },
   {
     files: ['src/**/*.ts'],
-    extends: [eslint.configs.recommended, eslintPluginPrettierRecommended, ...tseslint.configs.recommended],
+    extends: [
+      eslint.configs.recommended,
+      eslintConfigPrettier,
+      ...tseslint.configs.recommended
+    ],
     rules: {
       '@typescript-eslint/no-explicit-any': 'off',
       '@typescript-eslint/no-unused-vars': [
