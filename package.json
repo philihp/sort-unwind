@@ -38,7 +38,7 @@
     "@tsconfig/recommended": "1.0.7",
     "@types/jest": "29.5.13",
     "esbuild-jest": "0.5.0",
-    "eslint": "8.57.0",
+    "eslint": "8.57.1",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-jest": "28.8.3",
     "fast-shuffle": "6.1.0",
