@@ -39,7 +39,7 @@
     "@types/jest": "29.5.14",
     "esbuild-jest": "0.5.0",
     "eslint": "8.57.1",
-    "eslint-config-prettier": "10.1.1",
+    "eslint-config-prettier": "10.1.2",
     "eslint-plugin-jest": "28.11.0",
     "fast-shuffle": "6.1.1",
     "husky": "9.1.7",
