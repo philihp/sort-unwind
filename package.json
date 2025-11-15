@@ -44,7 +44,7 @@
     "fast-shuffle": "6.1.1",
     "husky": "9.1.7",
     "jest": "30.2.0",
-    "tsup": "8.5.0",
+    "tsup": "8.5.1",
     "typescript": "5.9.3",
     "typescript-eslint": "8.46.3",
     "lint-staged": "16.2.6",
