@@ -46,7 +46,7 @@
     "jest": "30.2.0",
     "tsup": "8.5.1",
     "typescript": "5.9.3",
-    "typescript-eslint": "8.46.4",
+    "typescript-eslint": "8.47.0",
     "lint-staged": "16.2.7",
     "prettier": "3.6.2",
     "ts-jest": "29.4.5"
