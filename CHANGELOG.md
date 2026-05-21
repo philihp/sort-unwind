@@ -7,10 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.1.1] - 2026-05-21
+
 ### Changed
 
 - Bumped dev dependencies: `typescript` 5.9.3 → 6.0.3, `typescript-eslint` 8.59.3 → 8.59.4, `ts-jest` 29.4.9 → 29.4.11.
 - Added `ignoreDeprecations: "6.0"` to `tsconfig.json` to silence the `baseUrl` deprecation emitted by tsup's DTS build under TypeScript 6.
+- Bumped GitHub Actions: `actions/checkout` v6, `actions/setup-node` v6, `actions/upload-artifact` v7, `github/codeql-action` v4. Updated Node.js to v24 in workflows.
 
 ### Fixed
 
@@ -88,7 +91,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release.
 
-[Unreleased]: https://github.com/philihp/sort-unwind/compare/v3.1.0...HEAD
+[Unreleased]: https://github.com/philihp/sort-unwind/compare/v3.1.1...HEAD
+[3.1.1]: https://github.com/philihp/sort-unwind/compare/v3.1.0...v3.1.1
 [3.1.0]: https://github.com/philihp/sort-unwind/compare/v3.0.1...v3.1.0
 [3.0.1]: https://github.com/philihp/sort-unwind/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/philihp/sort-unwind/compare/v2.1.2...v3.0.0
