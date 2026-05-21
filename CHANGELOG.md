@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Added missing `@eslint/js` devDependency, which is imported by `eslint.config.js`.
+- Reordered `package.json` `exports` to put `types` first (per-format) so it isn't shadowed by `import`/`require`. Eliminates the esbuild "condition will never be used" warning during `tsup` builds and routes CJS consumers to `dist/index.d.cts`.
 
 ## [3.1.0] - 2024-07-20
 
