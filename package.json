@@ -34,6 +34,7 @@
     "sort"
   ],
   "devDependencies": {
+    "@eslint/js": "10.0.1",
     "@philihp/prettier-config": "1.0.0",
     "@tsconfig/recommended": "1.0.13",
     "@types/jest": "30.0.0",
@@ -44,12 +45,12 @@
     "fast-shuffle": "6.1.1",
     "husky": "9.1.7",
     "jest": "30.4.2",
-    "tsup": "8.5.1",
-    "typescript": "6.0.3",
-    "typescript-eslint": "8.59.4",
     "lint-staged": "17.0.5",
     "prettier": "3.8.3",
-    "ts-jest": "29.4.11"
+    "ts-jest": "29.4.11",
+    "tsup": "8.5.1",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.59.4"
   },
   "homepage": "https://github.com/philihp/sort-unwind#readme",
   "repository": {
