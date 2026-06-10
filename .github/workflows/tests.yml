@@ -2,27 +2,23 @@ name: tests
 
 on: push
 
-env:
-  CI: true
-
 jobs:
   tests:
     runs-on: ubuntu-latest
-    continue-on-error: true
     strategy:
       fail-fast: false
       matrix:
         node-version:
-          - 18.x # maintainence ends 2025-04-30
-          - 20.x # maintainence ends 2026-04-30
-          - 22.4.1 # maintainence ends 2027-04-30
+          - 22.x # maintenance ends 2027-04-30
+          - 24.x # maintenance ends 2028-04-30
+          - 26.x # maintenance ends 2029-04-30
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
       - run: npm install
-      - run: npm run build --if-present
+      - run: npm run build
       - run: npm test
       - run: npm run lint
 
@@ -32,9 +28,8 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
-          node-version: 24.16.0
+          node-version-file: .node-version
       - run: npm install
-      - run: npm run build --if-present
       - run: npm run test:coverage
       - name: Coveralls
         uses: coverallsapp/github-action@master

@@ -7,6 +7,8 @@
   "sideEffects": false,
   "type": "module",
   "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": {
@@ -28,9 +30,7 @@
     "test:watch": "jest --watch"
   },
   "files": [
-    "/dist/",
-    "package.json",
-    "!/dist/**/__tests__/*.js"
+    "dist"
   ],
   "keywords": [
     "functional",
@@ -41,9 +41,7 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@philihp/prettier-config": "1.0.0",
-    "@tsconfig/recommended": "1.0.13",
     "@types/jest": "30.0.0",
-    "esbuild-jest": "0.5.0",
     "eslint": "10.4.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-jest": "29.15.2",
@@ -66,7 +64,13 @@
     "url": "https://github.com/philihp/sort-unwind/issues"
   },
   "prettier": "@philihp/prettier-config",
+  "lint-staged": {
+    "src/**/*.{ts,tsx,js,jsx,json}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.0.0"
   }
 }
