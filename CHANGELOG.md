@@ -7,10 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.0.0] - 2026-06-11
+
+### Removed
+
+- **Breaking:** Removed the deprecated default export. Use the named import instead: `import { unwind } from 'sort-unwind'`.
+
 ### Changed
 
-- Bumped dev dependencies: `typescript` 5.9.3 → 6.0.3, `typescript-eslint` 8.59.3 → 8.59.4, `ts-jest` 29.4.9 → 29.4.11.
+- **Breaking:** Dropped support for Node 18 and 20 (both end-of-life); `engines` now requires Node >= 22.
+- Replaced jest with the built-in `node:test` runner, removing `jest`, `ts-jest`, `@types/jest`, and `eslint-plugin-jest`.
+- Simplified the eslint, tsconfig, tsup, and lint-staged configuration; added top-level `module`/`types` fields to `package.json`.
+- Bumped dev dependencies: `typescript` 5.9.3 → 6.0.3, `typescript-eslint` 8.59.3 → 8.59.4.
 - Added `ignoreDeprecations: "6.0"` to `tsconfig.json` to silence the `baseUrl` deprecation emitted by tsup's DTS build under TypeScript 6.
+- CI now tests on Node 22, 24, and 26.
+
+### Added
+
+- Release workflow that stages an npm publish (`npm stage publish`) when a GitHub release is published.
 
 ### Fixed
 
@@ -89,7 +103,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release.
 
-[Unreleased]: https://github.com/philihp/sort-unwind/compare/v3.1.0...HEAD
+[Unreleased]: https://github.com/philihp/sort-unwind/compare/v4.0.0...HEAD
+[4.0.0]: https://github.com/philihp/sort-unwind/compare/v3.1.0...v4.0.0
 [3.1.0]: https://github.com/philihp/sort-unwind/compare/v3.0.1...v3.1.0
 [3.0.1]: https://github.com/philihp/sort-unwind/compare/v3.0.0...v3.0.1
 [3.0.0]: https://github.com/philihp/sort-unwind/compare/v2.1.2...v3.0.0
