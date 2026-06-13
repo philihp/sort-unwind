@@ -41,7 +41,7 @@
   "devDependencies": {
     "@eslint/js": "10.0.1",
     "@philihp/prettier-config": "1.0.0",
-    "@types/node": "25.9.2",
+    "@types/node": "25.9.3",
     "eslint": "10.4.1",
     "eslint-config-prettier": "10.1.8",
     "fast-shuffle": "6.2.0",
