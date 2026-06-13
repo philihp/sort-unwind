@@ -47,7 +47,7 @@
     "fast-shuffle": "6.2.0",
     "husky": "9.1.7",
     "lint-staged": "17.0.7",
-    "prettier": "3.8.3",
+    "prettier": "3.8.4",
     "tsup": "8.5.1",
     "typescript": "6.0.3",
     "typescript-eslint": "8.60.1"
