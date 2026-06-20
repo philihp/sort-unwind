@@ -46,7 +46,7 @@
     "eslint-config-prettier": "10.1.8",
     "fast-shuffle": "6.2.0",
     "husky": "9.1.7",
-    "lint-staged": "17.0.7",
+    "lint-staged": "17.0.8",
     "prettier": "3.8.4",
     "tsup": "8.5.1",
     "typescript": "6.0.3",
