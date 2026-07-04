@@ -67,6 +67,27 @@ describe('unwind', () => {
     })
   })
 
+  it('accepts duplicate values', () => {
+    const [reversed] = unwind([3, 2, 1, 0], ['d', 'd', 'b', 'b'])
+    assert.deepEqual(reversed, ['b', 'b', 'd', 'd'])
+  })
+
+  it('sorts stably when ranks are duplicated', () => {
+    const src = ['a', 'b', 'c', 'd']
+    const rank = [1, 0, 1, 0]
+    const [dst, derank] = unwind(rank, src)
+    assert.deepEqual(dst, ['b', 'd', 'a', 'c'])
+    assert.deepEqual(derank, [1, 3, 0, 2])
+  })
+
+  it('does not mutate the inputs', () => {
+    const src = ['b', 'c', 'a']
+    const rank = [1, 2, 0]
+    unwind(rank, src)
+    assert.deepEqual(src, ['b', 'c', 'a'])
+    assert.deepEqual(rank, [1, 2, 0])
+  })
+
   it('allows ranks that are not zero-indexed integers', () => {
     const src = ['a', 'b', 'c', 'd', 'e', 'f']
     const rank = [0.28591, 0.42682, 0.35912, 0.21237, 0.60619, 0.47078]
