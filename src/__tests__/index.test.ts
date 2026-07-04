@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
 import { shuffle } from 'fast-shuffle'
-import { unwind } from '../index.ts'
+import { curried, unwind } from '../index.ts'
 
 describe('unwind', () => {
   it('accepts zero items', () => {
@@ -53,6 +53,18 @@ describe('unwind', () => {
     assert.deepEqual(dst, src)
     assert.notEqual(dst, src)
     assert.notEqual(dederank, rank)
+  })
+
+  it('can be curried', () => {
+    const reverse4 = curried([3, 2, 1, 0])
+    assert.doesNotThrow(() => {
+      const [reversed] = reverse4(['d', 'c', 'b', 'a'])
+      assert.deepEqual(reversed, ['a', 'b', 'c', 'd'])
+    })
+    assert.doesNotThrow(() => {
+      const [reversed] = reverse4(['d', 'd', 'b', 'b'])
+      assert.deepEqual(reversed, ['b', 'b', 'd', 'd'])
+    })
   })
 
   it('accepts duplicate values', () => {

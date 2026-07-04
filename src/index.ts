@@ -3,3 +3,8 @@ export const unwind = <T>(rank: number[], src: T[]): [T[], number[]] => {
   const derank = [...src.keys()].sort((a, b) => rank[a] - rank[b])
   return [derank.map((i) => src[i]), derank]
 }
+
+export const curried =
+  (rank: number[]) =>
+  <T>(src: T[]): [T[], number[]] =>
+    unwind(rank, src)
