@@ -1,7 +1,7 @@
 {
   "name": "sort-unwind",
-  "version": "4.0.0",
-  "description": "Sorts an array and then unwinds that sort on another array",
+  "version": "4.1.0",
+  "description": "Invert a previous sort operation to unwind an array",
   "author": "Philihp Busby <philihp@gmail.com>",
   "license": "MIT",
   "sideEffects": false,
@@ -34,9 +34,13 @@
   ],
   "keywords": [
     "functional",
+    "unsort",
     "array",
-    "undo",
-    "sort"
+    "unscramble",
+    "sort",
+    "inversion",
+    "reverse",
+    "inversion"
   ],
   "devDependencies": {
     "@eslint/js": "10.0.1",
