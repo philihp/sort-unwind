@@ -1,8 +1,12 @@
 {
   "name": "sort-unwind",
   "version": "4.1.0",
-  "description": "Invert a previous sort operation to unwind an array",
+  "description": "Sort an array and get the inverse permutation (argsort) to undo it, or apply the same sort order to parallel arrays",
   "author": "Philihp Busby <philihp@gmail.com>",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/philihp"
+  },
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
@@ -33,14 +37,16 @@
     "dist"
   ],
   "keywords": [
-    "functional",
+    "permutation",
+    "inverse-permutation",
+    "argsort",
     "unsort",
-    "array",
-    "unscramble",
-    "sort",
-    "inversion",
-    "reverse",
-    "inversion"
+    "unshuffle",
+    "reorder",
+    "parallel-arrays",
+    "typescript",
+    "undo",
+    "sort"
   ],
   "devDependencies": {
     "@eslint/js": "10.0.1",
