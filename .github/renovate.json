@@ -13,6 +13,11 @@
     {
       "matchDepTypes": ["devDependencies"],
       "automerge": true
+    },
+    {
+      "description": "typescript-eslint peer range is >=4.8.4 <6.1.0; hold typescript until it supports v7",
+      "matchPackageNames": ["typescript"],
+      "allowedVersions": "<7"
     }
   ]
 }
