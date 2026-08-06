@@ -26,12 +26,13 @@
     }
   },
   "scripts": {
-    "build": "tsup",
-    "lint": "eslint .",
+    "build": "tsup && tsc -p tsconfig.build.json && cp dist/index.d.ts dist/index.d.cts",
+    "lint": "oxlint",
     "prepare": "husky && npm run build",
     "test": "node --experimental-strip-types --test 'src/**/*.test.ts'",
     "test:coverage": "mkdir -p coverage && node --experimental-strip-types --test --experimental-test-coverage --test-coverage-exclude='src/**/*.test.ts' --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=coverage/lcov.info 'src/**/*.test.ts'",
-    "test:watch": "node --experimental-strip-types --test --watch 'src/**/*.test.ts'"
+    "test:watch": "node --experimental-strip-types --test --watch 'src/**/*.test.ts'",
+    "typecheck": "tsc -p tsconfig.json"
   },
   "files": [
     "dist"
@@ -49,18 +50,15 @@
     "sort"
   ],
   "devDependencies": {
-    "@eslint/js": "10.0.1",
     "@philihp/prettier-config": "1.0.0",
     "@types/node": "25.9.5",
-    "eslint": "10.8.0",
-    "eslint-config-prettier": "10.1.8",
     "fast-shuffle": "6.2.1",
     "husky": "9.1.7",
     "lint-staged": "17.0.8",
+    "oxlint": "1.77.0",
     "prettier": "3.9.6",
     "tsup": "8.5.1",
-    "typescript": "6.0.3",
-    "typescript-eslint": "8.66.0"
+    "typescript": "7.0.2"
   },
   "homepage": "https://github.com/philihp/sort-unwind#readme",
   "repository": {
@@ -74,7 +72,7 @@
   "lint-staged": {
     "src/**/*.{ts,tsx,js,jsx,json}": [
       "prettier --write",
-      "eslint --fix"
+      "oxlint --fix"
     ]
   },
   "engines": {
