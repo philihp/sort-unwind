@@ -54,7 +54,7 @@
     "@types/node": "25.9.4",
     "eslint": "10.6.0",
     "eslint-config-prettier": "10.1.8",
-    "fast-shuffle": "6.2.0",
+    "fast-shuffle": "6.2.1",
     "husky": "9.1.7",
     "lint-staged": "17.0.8",
     "prettier": "3.9.4",
