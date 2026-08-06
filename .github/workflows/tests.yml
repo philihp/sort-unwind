@@ -13,7 +13,7 @@ jobs:
           - 24.x # maintenance ends 2028-04-30
           - 26.x # maintenance ends 2029-04-30
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
