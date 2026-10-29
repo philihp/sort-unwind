@@ -7,6 +7,25 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [4.1.1] - 2026-10-29
+
+The runtime code is the same as in 4.1.0. `dist/index.js` and `dist/index.cjs` are byte-identical to 4.1.0. The type declarations have a different form, but the types are the same. All other changes are to the toolchain, the tests, and the docs.
+
+### Performance
+
+The speed does not change from 4.1.0. If you upgrade from 3.1.0, `unwind` is faster on large arrays and a little slower on very small arrays. This change came in 4.1.0.
+
+Median time for one `unwind` call:
+
+| Array length |   3.1.0 |   4.1.0 |   4.1.1 | 4.1.1 compared to 3.1.0 |
+| -----------: | ------: | ------: | ------: | ----------------------- |
+|           10 | 0.53 µs | 0.63 µs | 0.62 µs | 17% slower              |
+|        1,000 |  143 µs |  145 µs |  143 µs | the same                |
+|      100,000 | 33.8 ms | 27.6 ms | 27.4 ms | 1.23× faster            |
+|    1,000,000 |  864 ms |  436 ms |  441 ms | 1.96× faster            |
+
+Each value is the median of 5 runs on Node 26.13.0 in a 4-CPU Linux container. The ranks and values are shuffled with a fixed seed. At 1,000,000 items, the 3.1.0 times changed from 538 ms to 930 ms between runs. The 4.1.0 and 4.1.1 times changed by less than 8%.
+
 ### Changed
 
 - Upgraded `typescript` to 7. TypeScript 7 does not ship the JS compiler API, so `oxlint` replaces `eslint` and `typescript-eslint`, and `tsc` now emits the declaration files instead of tsup.
@@ -127,7 +146,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initial release.
 
-[Unreleased]: https://github.com/philihp/sort-unwind/compare/v4.1.0...HEAD
+[Unreleased]: https://github.com/philihp/sort-unwind/compare/v4.1.1...HEAD
+[4.1.1]: https://github.com/philihp/sort-unwind/compare/v4.1.0...v4.1.1
 [4.1.0]: https://github.com/philihp/sort-unwind/compare/v4.0.0...v4.1.0
 [4.0.0]: https://github.com/philihp/sort-unwind/compare/v3.1.0...v4.0.0
 [3.1.0]: https://github.com/philihp/sort-unwind/compare/v3.0.1...v3.1.0
