@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
-import { shuffle } from 'fast-shuffle'
+import { createShuffle } from 'fast-shuffle'
 import { curried, unwind } from '../index.ts'
 
 describe('unwind', () => {
   it('accepts zero items', () => {
-    const src: any[] = []
+    const src: string[] = []
     const rank: number[] = []
     const [dst, derank] = unwind(rank, src)
     assert.deepEqual(dst, [])
@@ -37,34 +37,35 @@ describe('unwind', () => {
   })
 
   it('accepts 4 items', () => {
-    const src: string[] = ['b', 'd', 'c', 'a']
-    const rank: number[] = [1, 3, 2, 0]
+    const src = ['b', 'd', 'c', 'a']
+    const rank = [1, 3, 2, 0]
     const [dst, derank] = unwind(rank, src)
     assert.deepEqual(dst, ['a', 'b', 'c', 'd'])
     assert.deepEqual(derank, [3, 0, 2, 1])
   })
 
   it('can undo the ranking', () => {
-    const oneToAHundred = [...new Array(100)].map((_, i) => i)
-    const src: any[] = shuffle(oneToAHundred)
-    const rank: number[] = shuffle(oneToAHundred)
+    const shuffle = createShuffle(42)
+    const oneToAHundred = Array.from({ length: 100 }, (_, i) => i)
+    const src = shuffle(oneToAHundred)
+    const rank = shuffle(oneToAHundred)
     const [trans, derank] = unwind(rank, src)
     const [dst, dederank] = unwind(derank, trans)
     assert.deepEqual(dst, src)
     assert.notEqual(dst, src)
-    assert.notEqual(dederank, rank)
+    assert.deepEqual(dederank, rank)
   })
 
   it('can be curried', () => {
     const reverse4 = curried([3, 2, 1, 0])
-    assert.doesNotThrow(() => {
-      const [reversed] = reverse4(['d', 'c', 'b', 'a'])
-      assert.deepEqual(reversed, ['a', 'b', 'c', 'd'])
-    })
-    assert.doesNotThrow(() => {
-      const [reversed] = reverse4(['d', 'd', 'b', 'b'])
-      assert.deepEqual(reversed, ['b', 'b', 'd', 'd'])
-    })
+    assert.deepEqual(reverse4(['d', 'c', 'b', 'a']), [
+      ['a', 'b', 'c', 'd'],
+      [3, 2, 1, 0],
+    ])
+    assert.deepEqual(reverse4(['d', 'd', 'b', 'b']), [
+      ['b', 'b', 'd', 'd'],
+      [3, 2, 1, 0],
+    ])
   })
 
   it('accepts duplicate values', () => {

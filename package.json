@@ -29,9 +29,9 @@
     "build": "tsup && tsc -p tsconfig.build.json && cp dist/index.d.ts dist/index.d.cts",
     "lint": "oxlint",
     "prepare": "husky && npm run build",
-    "test": "node --experimental-strip-types --test 'src/**/*.test.ts'",
-    "test:coverage": "mkdir -p coverage && node --experimental-strip-types --test --experimental-test-coverage --test-coverage-exclude='src/**/*.test.ts' --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=coverage/lcov.info 'src/**/*.test.ts'",
-    "test:watch": "node --experimental-strip-types --test --watch 'src/**/*.test.ts'",
+    "test": "node --test 'src/**/*.test.ts'",
+    "test:coverage": "mkdir -p coverage && node --test --experimental-test-coverage --test-coverage-exclude='src/**/*.test.ts' --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=coverage/lcov.info 'src/**/*.test.ts'",
+    "test:watch": "node --test --watch 'src/**/*.test.ts'",
     "typecheck": "tsc -p tsconfig.json"
   },
   "files": [
@@ -51,11 +51,11 @@
   ],
   "devDependencies": {
     "@philihp/prettier-config": "1.0.0",
-    "@types/node": "25.9.9",
+    "@types/node": "26.6.6",
     "fast-shuffle": "7.0.0",
     "husky": "9.1.7",
     "lint-staged": "17.6.0",
-    "oxlint": "1.89.0",
+    "oxlint": "1.90.0",
     "prettier": "3.9.10",
     "tsup": "9.0.0",
     "typescript": "7.0.2"
@@ -77,5 +77,8 @@
   },
   "engines": {
     "node": ">=22.0.0"
+  },
+  "allowScripts": {
+    "esbuild": false
   }
 }
