@@ -13,8 +13,8 @@ Zero dependencies, dual ESM/CJS build, TypeScript types included.
 
 ## Install
 
-```
-npm install --save sort-unwind
+```sh
+npm install sort-unwind
 ```
 
 ## Usage
